@@ -1,0 +1,70 @@
+/*start main form*/
+form{
+    margin: auto;
+    width: 300px;
+    height: 500px;
+    background: #DDD;
+    font-weight: bold;
+}
+/*start main label*/
+
+form label{
+    display: block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: rgb(201, 47, 47);
+    font-size: 40px;
+}
+/*start input text*/
+
+form input[type='text']{
+    width: 200px;
+    height: 25px;
+    margin-left: px;
+    padding: 5px;
+
+}
+/*start input submit*/
+
+form input[type='submit']{
+    height: 40px;
+    background-color: rgba(184, 171, 171, 0.911);
+    color: rgb(70, 54, 54);
+    font-weight: bold;
+}
+/*global ul*/
+ul{
+    list-style: none;
+}
+/*global li*/
+li{
+    text-align: center;
+    display: block;
+    background-color: royalblue;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    width: 160px;
+
+}
+/*start input checkbox*/
+
+form input[type='checkbox']{
+    width: 30px;
+    height: 20px;
+    position: relative;
+
+}
+/*start error message*/
+
+p{
+    color: red;
+    margin: 10px;
+    font-size: 20px;
+    display: none;
+}
+.checked{
+    text-decoration: line-through;
+}
