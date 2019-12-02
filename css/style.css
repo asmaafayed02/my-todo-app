@@ -65,6 +65,9 @@ p{
     font-size: 20px;
     display: none;
 }
-.checked{
-    text-decoration: line-through;
+/*start trash icon*/
+#trash{background: none;border: none;}
+#trash i{
+    font-size: 22px;
+    
 }
