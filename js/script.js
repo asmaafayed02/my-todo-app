@@ -2,7 +2,8 @@
 let form = document.getElementById('form'),
     inputField = document.getElementById('input'),
     ulList = document.querySelector('ul'),
-    massege = document.getElementById('message')
+    massege = document.getElementById('message'),
+    todoArray = [];
    // trashIcon 
  
 function todoList() {
@@ -33,12 +34,29 @@ function todoList() {
     //clear the input field
     inputField.value='';
      //checked checkbox 
-     if(checkBox.checked == 'false'){
-        let liValue = li.textContent;
-        liValue.style.textDecoration = 'lineThrough'
-    }
+     checkBox.onclick = function(){
+         if(checkBox.checked == true){
+         li.setAttribute('class','check')
+         }else{
+             li.classList.remove('check')
+         }
+     }
       //set the value of items inside the localstorage
-       localStorage.setItem(li,inputField.value);
+      //  var ourRequest = new XMLHttpRequest();
+     //ourRequest.open('GET','/article/xmlhttprequest/example/load')
+     // ourRequest.onload = function(){
+        //for(i=0; i<todoArray.length;i++){
+            //    ulList.innerHTML = JSON.parse(localStorage.getItem('myli'))  
+          // } 
+     //}
+     //ourRequest.send()
+
+      let liObj = {'li': li.value,'checkBox': checkBox,'deleteButton':checkBox};
+      todoArray.push(liObj)
+      let localValue = JSON.stringify(todoArray);
+      localStorage.setItem('myli',localValue)
+      
+       
    //remove the item when user dblclicked on deleltbutton
        deleteButton.onclick = function(){
             ulList.removeChild(li);

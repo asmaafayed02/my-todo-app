@@ -68,6 +68,8 @@ p{
 /*start trash icon*/
 #trash{background: none;border: none;}
 #trash i{
-    font-size: 22px;
-    
+    font-size: 22px;   
+}
+.check{
+    text-decoration: line-through;
 }
